@@ -1,0 +1,27 @@
+<template>
+    <section class="h-[4rem] md:h-[6rem] w-full bg-gray-100 p-2">
+        <div class="flex justify-between items-center px-2 md:px-4 max-w-7xl mx-auto">
+            <router-link to="/">
+                <img src="@/assets/sagespra.png" alt="Sagespra" class="h-12 md:h-20">
+            </router-link>
+            <el-dropdown placement="bottom-end" trigger="click">
+                <el-button size="large" class="!bg-transparent !border-none !text-[#FF8400]  ">
+                    <div class="mr-2 hidden md:block font-bold text-xl"> {{ $auth.user.id }}</div>
+                    <el-avatar :size="40"
+                        :src="'https://res.cloudinary.com/atriontechsd/image/upload/v1688553835/testfacturel/clients1/1688553831712.jpg'" />
+                </el-button>
+                <template #dropdown>
+                    <el-dropdown-menu>
+                        <el-dropdown-item @click="logout">Salir</el-dropdown-item>
+                    </el-dropdown-menu>
+                </template>
+            </el-dropdown>
+        </div>
+    </section>
+</template>
+
+<script setup lang="ts">
+import { useAuth } from "../../services/AuthService"
+const { logout } = useAuth();
+
+</script >                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

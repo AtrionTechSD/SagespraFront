@@ -1,0 +1,24 @@
+.el-menu{
+    @apply !bg-transparent;
+}
+
+.el-menu:not(.el-menu--popup) li, .el-sub-menu__title{
+    @apply !text-gray-50 !text-base  !font-semibold !px-1 md:!px-2;
+}
+
+.el-menu:not(.el-menu--popup) li:hover, .el-sub_menu:hover, .el-sub-menu__title:hover{
+  @apply !text-gray-100 !bg-[#FF8400];
+}
+
+.el-sub-menu__icon-arrow{
+  @apply !hidden;
+}
+
+/* hide number indicator */
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
